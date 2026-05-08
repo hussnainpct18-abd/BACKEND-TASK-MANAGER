@@ -8,3 +8,4 @@ connectDB();
 // app.listen(process.env.PORT,()=>{
 //     console.log(`Server is running on port no ${process.env.PORT} `);
 // })
+export default app;
