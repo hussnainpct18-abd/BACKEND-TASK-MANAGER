@@ -37,7 +37,9 @@ app.use(express.json())
 
 app.use(morgan("dev"))
 
-
+app.get('/',(req,res)=>{
+    res.send("Welcome to Task Manager ")
+})
 app.use(express.urlencoded({ extended: true }))
 
 app.use('/uploads', express.static('uploads'));
