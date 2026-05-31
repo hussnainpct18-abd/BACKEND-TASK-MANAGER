@@ -15,7 +15,8 @@ app.use(express.json())
 app.use(morgan("dev"))
 
 app.use(cors({
-    origin: ["http://localhost:5173","https://task-manager-frontend-nine-liart.vercel.app"],
+    origin: "https://task-manager-frontend-nine-liart.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials:true
 }))
 
