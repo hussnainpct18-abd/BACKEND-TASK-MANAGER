@@ -18,8 +18,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
-
+app.options(/.*/, cors());
 // app.use(cors({
 //     origin: "https://task-manager-frontend-nine-liart.vercel.app",
 //     methods: ["GET", "POST", "PUT", "DELETE"],
