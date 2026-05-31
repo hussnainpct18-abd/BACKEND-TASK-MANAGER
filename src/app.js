@@ -11,7 +11,7 @@ const cors = require('cors');
 const app = express();
 
 const corsOptions = {
-    origin: "https://task-manager-frontend-2u0qpyyy3-hussnainpct18-7686s-projects.vercel.app",
+    origin: "https://task-manager-frontend-bdr3cquiy-hussnainpct18-7686s-projects.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
