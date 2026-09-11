@@ -152,14 +152,17 @@ async function updateTask(req, res) {
             return res.status(404).json({ message: "Task not found" });
         }
 
-        const updatecategory = await categoryModel.findByIdAndUpdate({ _id: find.categoryId },
-            { $set: { category, color } }, { returnDocument: 'after' }
-        )
+        const updatecategory = await categoryModel.findByIdAndUpdate(
+            find.categoryId,
+            { $set: { name: category, color } },
+            { new: true }
+        );
 
-
-        const updatestatus = await statusModel.findByIdAndUpdate({ _id: find.statusId },
-            { $set: { status, icon } }, { returnDocument: 'after' }
-        )
+        const updatestatus = await statusModel.findByIdAndUpdate(
+            find.statusId,
+            { $set: { name: status, icon } },
+            { new: true }
+        );
 
         const task = await taskModel.findOneAndUpdate(
             { _id: req.params.id, userId: req.user._id },
